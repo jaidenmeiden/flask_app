@@ -12,6 +12,7 @@ deactivate
 pip install flask
 pip install flask-bootstrap4
 pip install flask-wtf
+pip install flask-testing
 pip freeze
 ```
 
@@ -39,11 +40,18 @@ echo $FLASK_ENV
 flask run
 ```
 
+### Testing
+```
+flask test
+```
+
 # Flask Specification
 
 [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 
 [Source code](https://github.com/pallets/flask/)
+
+[Flask-Testing](https://pythonhosted.org/Flask-Testing/)
 
 [Single-Page Applications](https://flask.palletsprojects.com/en/2.0.x/patterns/singlepageapplications/)
 
