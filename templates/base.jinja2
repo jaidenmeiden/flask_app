@@ -8,10 +8,10 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
 </head>
 <body>
-    <header>
-        {% include 'navbar.jinja2' %}
-    </header>
     {% block content %}
+        <header>
+            {% include 'navbar.jinja2' %}
+        </header>
     {% endblock %}
 </body>
 </html>

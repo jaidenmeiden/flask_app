@@ -4,6 +4,7 @@
 {% block title %} {{ super() }} Welcome {% endblock %}
 
 {% block content %}
+    {{ super() }}
     {% if user_ip %}
     <h1>Hello to Flask World from {{user_ip}}</h1>
     {% else %}
