@@ -11,6 +11,7 @@ deactivate
 ```
 pip install flask
 pip install flask-bootstrap4
+pip install flask-wtf
 pip freeze
 ```
 
