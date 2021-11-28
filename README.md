@@ -10,6 +10,7 @@ deactivate
 ### Install tools
 ```
 pip install flask
+pip install flask-bootstrap4
 pip freeze
 ```
 
@@ -26,6 +27,11 @@ echo $FLASK_APP
 export FLASK_DEBUG=1
 echo $FLASK_DEBUG
 ```
+**Environment:**
+```
+export FLASK_ENV=development
+echo $FLASK_ENV
+```
 
 ### Launch application
 ```
@@ -37,6 +43,8 @@ flask run
 [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 
 [Source code](https://github.com/pallets/flask/)
+
+[Single-Page Applications](https://flask.palletsprojects.com/en/2.0.x/patterns/singlepageapplications/)
 
 #### General description
 
@@ -52,7 +60,7 @@ Flask offers suggestions, but doesn't enforce any dependencies or project layout
 
 ### [Jinja 2](https://jinja2docs.readthedocs.io/en/stable/)
 
-### [Source code](https://github.com/pallets/jinja)
+[Source code](https://github.com/pallets/jinja)
 
 Jinja2 is a modern and designer-friendly templating language for Python, modelled after Django’s templates. It is fast, widely used and secure with the optional sandboxed template execution environment.
 
@@ -66,6 +74,13 @@ Features:
 * Easy to debug. Line numbers of exceptions directly point to the correct line in the template.
 * Configurable syntax
 
+### [TailwindCSS](https://tailwindcss.com/)
+
+[Integrating TailwindCSS into Flask Apps](https://www.section.io/engineering-education/integrate-tailwindcss-into-flask/)
+
+TailwindCSS is a utility-first CSS framework used to build frontend applications. TailwindCSS differs from other kinds of CSS frameworks as it gives the user total control over their design.
+
+Rather than adding obscure CSS classes to your code, with TailwindCSS you use utility classes to create your components, with as much control over every single styling as you want. All without having to ever write a single line of CSS.
 
 
 
