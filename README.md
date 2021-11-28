@@ -19,8 +19,12 @@ it is necessary to declare an environment variable so that flask knows where the
 
 ```
 export FLASK_APP=main.py
-
 echo $FLASK_APP
+```
+**Only in development environment:**
+```
+export FLASK_DEBUG=1
+echo $FLASK_DEBUG
 ```
 
 ### Launch application
