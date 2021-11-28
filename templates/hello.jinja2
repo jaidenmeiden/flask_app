@@ -1,4 +1,5 @@
 {% extends 'base.jinja2' %}
+{% import 'macros.jinja2' as macros %}
 
 {% block title %} {{ super() }} Welcome {% endblock %}
 
@@ -8,4 +9,10 @@
     {% else %}
     <a href="{{ url_for('index') }}">Inicio</a>
     {% endif %}
+
+    <ul>
+        {% for toDO in toDOs %}
+            {{ macros.render_toDO(toDO) }}
+        {% endfor %}
+    </ul>
 {% endblock %}
