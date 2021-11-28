@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Flask World | {% endblock %}</title>
+    <title>
+        {% block title %}Flask World | {% endblock %}
+    </title>
 </head>
 <body>
+    <header>
+        {% include 'navbar.jinja2' %}
+    </header>
     {% block content %}
     {% endblock %}
 </body>
