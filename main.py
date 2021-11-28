@@ -1,5 +1,8 @@
 from flask import Flask, request, make_response, redirect, render_template, session
 from flask_bootstrap import Bootstrap
+from flask_wtf import FlaskForm
+from wtforms.fields import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
@@ -7,6 +10,12 @@ bootstrap = Bootstrap(app)
 app.config['SECRET_KEY'] = 'SUPER SECRETO'
 
 toDOs = ['Task1', 'Task2', 'Task3', 'Task4']
+
+
+class LoginForm(FlaskForm):
+    username = StringField('Nombre de usuario', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    submit = SubmitField('Enviar')
 
 
 @app.errorhandler(404)
@@ -32,9 +41,12 @@ def index():
 @app.route('/hello')
 def hello():
     user_ip = session.get('user_ip')
+    login_form = LoginForm()
+
     context = {
         'user_ip': user_ip,
-        'toDOs': toDOs
+        'todos': toDOs,
+        'login_form': login_form
     }
 
     return render_template('hello.jinja2', **context)
