@@ -5,6 +5,16 @@ app = Flask(__name__)
 toDOs = ['Task1', 'Task2', 'Task3', 'Task4']
 
 
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('404.jinja2', error=error)
+
+
+@app.errorhandler(500)
+def server_error(error):
+    return render_template('500.jinja2', error=error)
+
+
 @app.route('/')
 def index():
     user_ip = request.remote_addr
