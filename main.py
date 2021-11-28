@@ -2,6 +2,8 @@ from flask import Flask, request, make_response, redirect, render_template
 
 app = Flask(__name__)
 
+toDOs = ['Task1', 'Task2', 'Task3', 'Task4']
+
 
 @app.route('/')
 def index():
@@ -16,4 +18,10 @@ def index():
 @app.route('/hello')
 def hello():
     user_ip = request.cookies.get('user_ip')
-    return render_template('hello.html', user_ip=user_ip)
+
+    context = {
+        'user_ip': user_ip,
+        'toDOs': toDOs
+    }
+
+    return render_template('hello.jinja2', **context)
